@@ -14,11 +14,16 @@
 
 ## Running tests
 
+There no meaningful tests at the moment.  If you add them, use the
+following commands.
+
 * `ember test` – Runs the test suite on the current Ember version
 * `ember test --server` – Runs the test suite in "watch mode"
 * `ember try:each` – Runs the test suite against multiple Ember versions
 
 ## Running the dummy application
+
+The dummy app contains examples.
 
 * `ember serve`
 * Visit the dummy application at [http://localhost:4200](http://localhost:4200).
