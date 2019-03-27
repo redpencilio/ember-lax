@@ -20,36 +20,34 @@ ember install ember-lax
 Usage
 ------------------------------------------------------------------------------
 
-Just drop your content inside a `<Lax>` component to turn it on, or add the `{{lax}}`
-element modifier.
-
-Done!
+Drop your lax animations inside the `<Lax>` component, or add the `{{lax}}`
+element modifier to your tag.  Done!
 
 The dummy app contains some examples.
 
 ### Example with template component
 
-Just wrap your content in Lax.  lax.js is updated when the component
+Just wrap your content in `Lax`.  lax.js is updated when the component
 is rendered for the first time.
 
 ```hbs
   ... previous content here ...
   <Lax>
-    <div class="lax" data-lax-preset="leftToRight fadeInOut zoomInOut" style="background-color: red; width: 100px; height: 100px;">!AWESOME!</div>
-    <div class="lax" data-lax-preset="driftRight zoomOut" style="background-color: grey; width: 100px; height: 100px;">!AWESOME!</div>
+    <div class="lax" data-lax-preset="leftToRight fadeInOut zoomInOut">!AWESOME!</div>
+    <div class="lax" data-lax-preset="driftRight zoomOut">!AWESOME!</div>
   </Lax>
   ... next content be here ...
 ```
 
 ### Example with element modifier
 
-Have more dynamic content.  Add the `{{lax}}` element modifier on each
-element.
+Have more dynamic content?  Add the `{{lax}}` element modifier on each
+element you want animated.
 
 ```hbs
   ... previous content here ...
-  <div {{lax}} class="lax" data-lax-preset="leftToRight fadeInOut zoomInOut" style="background-color: red; width: 100px; height: 100px;">!AWESOME!</div>
-  <div {{lax}} class="lax" data-lax-preset="driftRight zoomOut" style="background-color: grey; width: 100px; height: 100px;">!AWESOME!</div>
+  <div {{lax}} class="lax" data-lax-preset="leftToRight fadeInOut zoomInOut">!AWESOME!</div>
+  <div {{lax}} class="lax" data-lax-preset="driftRight zoomOut">!AWESOME!</div>
   ... next content be here ...
 ```
 
@@ -61,10 +59,10 @@ but some is dynamic.
 ```hbs
   ... previous content be here ...
   <Lax>
-    <div class="lax" data-lax-preset="leftToRight fadeInOut zoomInOut" style="background-color: red; width: 100px; height: 100px;">!AWESOME!</div>
-    <div class="lax" data-lax-preset="driftRight zoomOut" style="background-color: grey; width: 100px; height: 100px;">!AWESOME!</div>
+    <div class="lax" data-lax-preset="leftToRight fadeInOut zoomInOut">!AWESOME!</div>
+    <div class="lax" data-lax-preset="driftRight zoomOut">!AWESOME!</div>
     {{#if superClient}}
-      <div {{lax}} class="lax" data-lax-preset="blurOut slalom rotate swing" style="background-color: grey; width: 200; height: 100px;">ZUpaHClient</div>
+      <div {{lax}} class="lax" data-lax-preset="blurOut slalom rotate swing">ZUpaHClient</div>
     {{/if}}
     <button {{action (mut superClient) (not superClient)}}>ToggleSuper</button>
   </Lax>
