@@ -6,9 +6,9 @@
   ],
   "private": true,
   "description": "Small description for ember-lax goes here",
-  "repository": "",
+  "repository": "https://github.com/redpencilio/ember-lax",
   "license": "MIT",
-  "author": "",
+  "author": "Aad Versteden <madnificent@gmail.com>",
   "directories": {
     "doc": "doc",
     "test": "tests"
