@@ -1,0 +1,20 @@
+<div style="min-height: 2000px; position: relative">
+  <div style="margin-top: 300px; margin-bottom: 800px; text-align: center;">
+    Scroll down for more fun!
+    <div style="text-align: center;">
+      <button {{action (mut superClient) (if superClient false true)}}>ToggleSuper</button>
+    </div>
+  </div>
+  <Lax>
+    <div class="lax" data-lax-preset="slalom spin fadeIn" style="background-color: red; width: 100px; height: 100px;">!AWESOME!</div>
+    <div class="lax" data-lax-preset="spinRev blurInOut" style="background-color: grey; width: 100px; height: 100px;">!CRAZY!</div>
+    {{#if superClient}}
+      <div {{lax}} class="lax" data-lax-preset="blurOut slalom rotate swing" style="background-color: teal; width: 200; height: 100px;">DYNAMISM</div>
+    {{/if}}
+  </Lax>
+  <div class="lax" data-lax-preset="leftToRight fadeInOut zoomInOut" style="background-color: red; width: 100px; height: 100px; margin: 200px 0;">!COOL!</div>
+  <div class="lax" data-lax-preset="leftToRight zoomOut" style="background-color: grey; width: 100px; height: 100px; margin: 200px 0;">!DASWEET!</div>
+  <div style="margin-top: 400px; margin-bottom: 1000px; text-align: center;">
+    Scroll up for reverse effect :)
+  </div>
+</div>

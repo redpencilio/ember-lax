@@ -11,6 +11,7 @@ Router.map(function() {
     this.route('as-component');
     this.route('as-modifier');
     this.route('simple-1');
+    this.route('simple-2');
   });
 });
 
