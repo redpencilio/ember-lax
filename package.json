@@ -4,7 +4,6 @@
   "keywords": [
     "ember-addon"
   ],
-  "private": true,
   "description": "Small description for ember-lax goes here",
   "repository": "https://github.com/redpencilio/ember-lax",
   "license": "MIT",
