@@ -10,6 +10,7 @@ Router.map(function() {
   this.route('demo', function() {
     this.route('as-component');
     this.route('as-modifier');
+    this.route('simple-1');
   });
 });
 
