@@ -46,8 +46,8 @@ element you want animated.
 
 ```hbs
   ... previous content here ...
-  <div {{lax}} class="lax" data-lax-preset="leftToRight fadeInOut zoomInOut">!AWESOME!</div>
-  <div {{lax}} class="lax" data-lax-preset="driftRight zoomOut">!AWESOME!</div>
+  <div {{lax preset="leftToRight fadeInOut zoomInOut"}}>!AWESOME!</div>
+  <div {{lax preset="driftRight zoomOut"}}>!AWESOME!</div>
   ... next content be here ...
 ```
 
@@ -62,7 +62,7 @@ but some is dynamic.
     <div class="lax" data-lax-preset="leftToRight fadeInOut zoomInOut">!AWESOME!</div>
     <div class="lax" data-lax-preset="driftRight zoomOut">!AWESOME!</div>
     {{#if superClient}}
-      <div {{lax}} class="lax" data-lax-preset="blurOut slalom rotate swing">ZUpaHClient</div>
+      <div {{lax preset="blurOut slalom rotate swing"}}>ZUpaHClient</div>
     {{/if}}
     <button {{action (mut superClient) (not superClient)}}>ToggleSuper</button>
   </Lax>
