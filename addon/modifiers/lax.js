@@ -1,20 +1,18 @@
-import Ember from 'ember';
+import { inject as service } from '@ember/service';
+import Modifier from 'ember-oo-modifiers';
 
-export default Ember._setModifierManager(
-  owner => ({
-    createModifier() {
-      return { name: "lax-modifier" };
-    },
-    installModifier( state, element, { positional: [givenName] } ){
-      state.name = givenName || state.name;
-      const laxService = owner.lookup( 'service:lax' );
-      laxService.addListener( state.name );
-    },
-    updateModifier() {},
-    destroyModifier(state) {
-      const laxService = owner.lookup( 'service:lax' );
-      laxService.removeListener( state.name );
-    }
-  }),
-  class HasLaxModifier {});
+class LaxModifier extends Modifier {
+  @service lax
 
+  didInsertElement([name]) {
+    name = name ? name : "lax-modifier";
+    this.lax.addListener( name );
+  }
+
+  willDestroyElement([name]) {
+    name = name ? name : "lax-modifier";
+    this.lax.removeListener( name );
+  }
+}
+
+export default Modifier.modifier( LaxModifier );
