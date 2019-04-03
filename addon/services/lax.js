@@ -2,25 +2,41 @@ import Service from '@ember/service';
 import lax from 'lax.js';
 
 export default class LaxService extends Service {
-  listenerCount = 0
+  userCount = 0
 
   constructor() {
     super();
     lax.setup();
   }
 
+  addWatchedElement( domNode, name ) {
+    console.debug(`Adding watched element ${name}`);
+    this.userCount++;
+    if( this.userCount == 1 )
+      this.enableLax();
+    lax.addElement( domNode );
+  }
+
+  removeWatchedElement( domNode, name ) {
+    console.debug(`Removing watched element ${name}`);
+    this.userCount--;
+    if( this.userCount == 0 )
+      this.disableLax();
+    lax.removeElement( domNode );
+  }
+
   addListener( name ) {
     console.debug(`Adding listener ${name}`);
-    this.listenerCount++;
-    if( this.listenerCount == 1 )
+    this.userCount++;
+    if( this.userCount == 1 )
       this.enableLax();
     this.repopulate();
   }
 
   removeListener( name ) {
     console.debug(`Removing listener ${name}`);
-    this.listenerCount--;
-    if( this.listenerCount == 0 )
+    this.userCount--;
+    if( this.userCount == 0 )
       this.disableLax();
     else
       this.repopulate();

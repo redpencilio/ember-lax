@@ -12,7 +12,7 @@ class LaxModifier extends Modifier {
         `${value}` );
     } );
     this.element.classList.add("lax");
-    this.lax.addListener( name );
+    this.lax.addWatchedElement( this.element, name );
   }
 
   willDestroyElement([name], namedProperties) {
@@ -22,6 +22,7 @@ class LaxModifier extends Modifier {
       this.element.removeAttribute(`data-lax-${name}`);
     });
     this.element.classList.remove("lax");
+    this.lax.removeWatchedElement( this.element, name );
   }
 }
 

@@ -41,8 +41,8 @@ is rendered for the first time.
 
 ### Example with element modifier
 
-Have more dynamic content?  Add the `{{lax}}` element modifier on each
-element you want animated.
+Have more dynamic content or want to write less content?  Add the
+`{{lax}}` element modifier on each element you want animated instead.
 
 ```hbs
   ... previous content here ...
@@ -50,6 +50,11 @@ element you want animated.
   <div {{lax preset="driftRight zoomOut"}}>!AWESOME!</div>
   ... next content be here ...
 ```
+
+The lax modifier accepts any attribute lax understands but doesn't
+require the `data-lax-` prefix to be specified.  The current
+implementation prefixes all attributes with `data-lax-` but it is
+possible to divert from that if Lax takes a turn in the future.
 
 ### Mixing
 
