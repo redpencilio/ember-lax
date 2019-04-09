@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/redpencilio/ember-lax.svg?branch=master)](https://travis-ci.org/redpencilio/ember-lax)
+
 ember-lax
 ==============================================================================
 
