@@ -32,8 +32,6 @@ module.exports = {
         'tests/dummy/config/**/*.js'
       ],
       excludedFiles: [
-        'app/**',
-        'tests/dummy/app/**'
       ],
       parserOptions: {
         sourceType: 'script',
@@ -46,6 +44,9 @@ module.exports = {
       plugins: ['node'],
       rules: Object.assign({}, require('eslint-plugin-node').configs.recommended.rules, {
         // add your custom rules and overrides for node files here
+        "new-module-imports": 0,
+        "node/no-extraneous-require": 0,
+        "node/no-unpublished-require": 0
       })
     }
   ]

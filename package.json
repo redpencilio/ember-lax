@@ -34,7 +34,7 @@
     "ember-cli": "github:ember-cli/ember-cli#c7b2508051253a9828f37d61942a3d62b2989df2",
     "ember-cli-app-version": "^3.2.0",
     "ember-cli-dependency-checker": "^3.0.0",
-    "ember-cli-eslint": "^5.0.0",
+    "ember-cli-eslint": "^5.1.0",
     "ember-cli-htmlbars-inline-precompile": "^2.0.0",
     "ember-cli-inject-live-reload": "^2.0.1",
     "ember-cli-release": "^1.0.0-beta.2",
@@ -48,7 +48,7 @@
     "ember-qunit": "^4.1.2",
     "ember-resolver": "^5.1.3",
     "ember-source": "https://s3.amazonaws.com/builds.emberjs.com/canary/shas/5e4b58feee28201aa314951a38bdf60535f79395.tgz",
-    "eslint-plugin-ember": "^6.0.1",
+    "eslint-plugin-ember": "^6.3.0",
     "eslint-plugin-node": "^8.0.1",
     "loader.js": "^4.7.0",
     "qunit-dom": "^0.8.0"
