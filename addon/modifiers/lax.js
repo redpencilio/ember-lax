@@ -17,7 +17,6 @@ class LaxModifier extends Modifier {
 
   willDestroyElement([name], namedProperties) {
     name = name ? name : "lax-modifier";
-    this.lax.removeListener( name );
     Object.entries( namedProperties ).forEach( ([name]) => {
       this.element.removeAttribute(`data-lax-${name}`);
     });
