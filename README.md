@@ -25,7 +25,7 @@ Usage
 Drop your lax animations inside the `<Lax>` component, or add the `{{lax}}`
 element modifier to your tag.  Done!
 
-The dummy app contains some examples.
+The [dummy app](./tests/dummy/app/templates/demo/) contains some examples.
 
 ### Example with element modifier
 
