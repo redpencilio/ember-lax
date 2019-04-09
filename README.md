@@ -27,20 +27,6 @@ element modifier to your tag.  Done!
 
 The dummy app contains some examples.
 
-### Example with template component
-
-Just wrap your content in `Lax`.  lax.js is updated when the component
-is rendered for the first time.
-
-```hbs
-  ... previous content here ...
-  <Lax>
-    <div class="lax" data-lax-preset="leftToRight fadeInOut zoomInOut">!AWESOME!</div>
-    <div class="lax" data-lax-preset="driftRight zoomOut">!AWESOME!</div>
-  </Lax>
-  ... next content be here ...
-```
-
 ### Example with element modifier
 
 Have more dynamic content or want to write less content?  Add the
@@ -57,6 +43,20 @@ The lax modifier accepts any attribute lax understands but doesn't
 require the `data-lax-` prefix to be specified.  The current
 implementation prefixes all attributes with `data-lax-` but it is
 possible to divert from that if Lax takes a turn in the future.
+
+### Example with template component
+
+Just wrap your content in `Lax`.  lax.js is updated when the component
+is rendered for the first time.
+
+```hbs
+  ... previous content here ...
+  <Lax>
+    <div class="lax" data-lax-preset="leftToRight fadeInOut zoomInOut">!AWESOME!</div>
+    <div class="lax" data-lax-preset="driftRight zoomOut">!AWESOME!</div>
+  </Lax>
+  ... next content be here ...
+```
 
 ### Mixing
 
